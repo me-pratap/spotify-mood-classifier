@@ -15,6 +15,10 @@ Built a feedforward neural network trained on 114,000 Spotify tracks to predict 
 - Hidden Layer 3: 32 neurons (ReLU)
 - Output Layer: 4 neurons (Softmax)
 
+## 🧠 My Input
+- epochs=10
+- batch_size=120
+
 ## 📊 Features Used
 - Danceability, Energy, Loudness, Speechiness
 - Acousticness, Instrumentalness, Liveness, Valence, Tempo
