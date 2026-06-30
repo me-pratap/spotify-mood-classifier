@@ -4,9 +4,10 @@ A deep learning project that classifies songs into moods — **Happy, Sad, Angry
 
 ## 📌 Overview
 Built a feedforward neural network trained on 114,000 Spotify tracks to predict the mood of any song based on its audio characteristics.
+Mood labels were rule-derived from valence and energy thresholds (e.g., high valence + high energy → "happy"), rather than manually annotated. This project demonstrates the network's ability to learn and approximate that decision boundary from raw audio features.
 
 ## 🎯 Accuracy
-**99.52%** on 22,800 unseen songs
+99.52% on 22,800 unseen songs — expected to be high since the labeling rule was itself a function of two of the input features (valence, energy).
 
 ## 🧠 Model Architecture
 - Input Layer: 9 audio features
@@ -32,6 +33,9 @@ Built a feedforward neural network trained on 114,000 Spotify tracks to predict 
 2. Install requirements: `pip install tensorflow pandas numpy scikit-learn matplotlib`
 3. Open `spotify_mood_classifier.ipynb` in Jupyter Notebook
 4. Run all cells
+
+⚠️ Notes
+Since mood labels were derived directly from valence and energy, the model partially learns to reconstruct a known rule rather than solving a fully independent prediction problem. A harder, leakage-free variant (excluding valence/energy from inputs) is a planned future iteration.
 
 ## 👤 Author
 **Pratap** — [GitHub](https://github.com/me-pratap)
